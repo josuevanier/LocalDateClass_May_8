@@ -1,6 +1,8 @@
 package org.example;
 
+import java.text.DateFormat;
 import java.text.NumberFormat;
+import java.util.Date;
 import java.util.Locale;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -16,5 +18,10 @@ public class Main {
 
         System.out.println(denf.format(number));
         System.out.println(unsf.format(number));
+
+        Date now = new Date();
+        DateFormat usdf = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, deLocale);
+        System.out.println(usdf.format(now));
+        System.out.println(denf.format(now));
     }
 }
