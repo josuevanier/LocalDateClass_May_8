@@ -10,7 +10,7 @@ import java.util.Locale;
 public class Main {
     public static void main(String[] args) {
 
-        Locale deLocale = Locale.forLanguageTag("en-US");
+        Locale deLocale = Locale.GERMANY; // constant
         Locale usLocale = Locale.forLanguageTag("de-Germany");
         long number = 12345989898L;
         NumberFormat denf = NumberFormat.getInstance(deLocale);
