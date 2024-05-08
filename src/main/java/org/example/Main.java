@@ -10,18 +10,16 @@ import java.util.Locale;
 public class Main {
     public static void main(String[] args) {
 
-        Locale deLocale = new Locale("de", "De");
-        Locale usLocale = new Locale("en", "Us");
+        Locale deLocale = Locale.forLanguageTag("en-US");
+        Locale usLocale = Locale.forLanguageTag("de-Germany");
         long number = 12345989898L;
         NumberFormat denf = NumberFormat.getInstance(deLocale);
         NumberFormat unsf = NumberFormat.getInstance(usLocale);
 
-        System.out.println(denf.format(number));
-        System.out.println(unsf.format(number));
+        NumberFormat denfs = NumberFormat.getInstance(deLocale);
+        NumberFormat usnfs = NumberFormat.getInstance(usLocale);
+        System.out.println(denfs.format(number));
+        System.out.println(usnfs.format(number));
 
-        Date now = new Date();
-        DateFormat usdf = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, deLocale);
-        System.out.println(usdf.format(now));
-        System.out.println(denf.format(now));
     }
 }
